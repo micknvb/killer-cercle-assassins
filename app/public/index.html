@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <title>Le Cercle des Assassins — Jeu du Killer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css?v=20261024-v6" />
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <div class="brand" onclick="switchView('rules')">
+        <div class="brand-logo">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="10"/>
+            <line x1="22" y1="12" x2="18" y2="12"/>
+            <line x1="6" y1="12" x2="2" y2="12"/>
+            <line x1="12" y1="6" x2="12" y2="2"/>
+            <line x1="12" y1="22" x2="12" y2="18"/>
+            <circle cx="12" cy="12" r="3" fill="#fff"/>
+          </svg>
+        </div>
+        <div>
+          <div id="brand-title-text" class="brand-title">LE CERCLE DES ASSASSINS</div>
+          <div id="brand-sub-text" class="brand-subtitle">Jeu du Killer • Grandeur Nature</div>
+        </div>
+      </div>
+
+      <div class="topbar-right">
+        <div class="lang-switcher" title="Choisir la langue / Select language">
+          <button type="button" id="lang-btn-fr" class="lang-btn active" onclick="setLanguage('fr')">🇫🇷 FR</button>
+          <button type="button" id="lang-btn-en" class="lang-btn" onclick="setLanguage('en')">🇬🇧 EN</button>
+        </div>
+
+        <nav class="nav-tabs">
+          <button type="button" id="tab-rules" class="nav-tab active" onclick="switchView('rules')">
+            <span class="tab-icon">📜</span>
+            <span id="nav-label-rules">Règles</span>
+          </button>
+          <button type="button" id="tab-player" class="nav-tab" onclick="switchView('player')">
+            <span class="tab-icon">🕵️</span>
+            <span id="nav-label-player">Mon Contrat</span>
+          </button>
+          <button type="button" id="tab-board" class="nav-tab" onclick="switchView('board')">
+            <span class="tab-icon">🏆</span>
+            <span id="nav-label-board">Survivants</span>
+          </button>
+          <button type="button" id="tab-admin" class="nav-tab" onclick="switchView('admin')">
+            <span class="tab-icon">👑</span>
+            <span id="nav-label-admin">MJ</span>
+          </button>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div id="app-root"></div>
+  </main>
+
+  <div id="modal-root"></div>
+  <div id="toast-root" class="toast-container"></div>
+
+  <script src="/app.js?v=20261024-v6"></script>
+</body>
+</html>
